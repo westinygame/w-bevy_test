@@ -83,7 +83,7 @@ mod test {
 
     fn drain_events(app: &mut App) -> Vec<TestEvent>
     {
-        use bevy::app::Events;
+        use bevy::ecs::event::Events;
         app.world.get_resource_mut::<Events<TestEvent>>()
             .expect("Resource Events<TestEvent>> not registered")
             .drain()
