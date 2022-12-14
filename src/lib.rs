@@ -40,6 +40,7 @@ impl TestApp for App {
     }
 }
 
+#[derive(bevy::prelude::Resource)]
 struct EventsToSend<T>(Vec<Option<T>>)
 where
     T: Resource;
